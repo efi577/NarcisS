@@ -1,0 +1,251 @@
+# Creăm mai multe pagini HTML legate între ele și un meniu funcțional
+site_files = {
+    "index.html": """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiru Narcis - Acasă</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Spiru Narcis</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="produse.html">Produse</a></li>
+                <li><a href="cos.html">Coșul</a></li>
+                <li><a href="raport.html">Raportează</a></li>
+                <li><a href="ajutor.html">Ajutor</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Bine ai venit pe Spiru Narcis!</h1>
+            <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d" 
+                 alt="Fotbal pe stadion" 
+                 style="width:100%; max-height:400px; object-fit:cover;">
+            <p>Descoperă cele mai bune produse din domeniul fotbalului!</p>
+        </section>
+    </main>
+    <footer>
+        <div class="sponsori">
+            <p>Sponsori:</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Adidas">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Puma_AG.svg" alt="Puma">
+        </div>
+    </footer>
+</body>
+</html>
+""",
+    "produse.html": """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiru Narcis - Produse</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Spiru Narcis</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="produse.html">Produse</a></li>
+                <li><a href="cos.html">Coșul</a></li>
+                <li><a href="raport.html">Raportează</a></li>
+                <li><a href="ajutor.html">Ajutor</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="produse">
+            <h2>Produse</h2>
+            <div class="produse-grid">
+                <div class="produs">
+                    <img src="https://images.unsplash.com/photo-1565023021405-3fa48b726fa4" alt="Ghete Fotbal">
+                    <h3>Ghete Fotbal</h3>
+                    <p>Preț: 150 RON</p>
+                </div>
+                <div class="produs">
+                    <img src="https://images.unsplash.com/photo-1603575531337-df362d6d04f6" alt="Tricou Fotbal">
+                    <h3>Tricou Fotbal</h3>
+                    <p>Preț: 80 RON</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Spiru Narcis</p>
+    </footer>
+</body>
+</html>
+""",
+    "cos.html": """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiru Narcis - Coșul</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Spiru Narcis</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="produse.html">Produse</a></li>
+                <li><a href="cos.html">Coșul</a></li>
+                <li><a href="raport.html">Raportează</a></li>
+                <li><a href="ajutor.html">Ajutor</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Coșul tău</h2>
+        <p>Momentan coșul este gol.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Spiru Narcis</p>
+    </footer>
+</body>
+</html>
+""",
+    "raport.html": """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiru Narcis - Raportează</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Spiru Narcis</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="produse.html">Produse</a></li>
+                <li><a href="cos.html">Coșul</a></li>
+                <li><a href="raport.html">Raportează</a></li>
+                <li><a href="ajutor.html">Ajutor</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Raportează o problemă</h2>
+        <form>
+            <label for="problema">Descrie problema:</label><br>
+            <textarea id="problema" rows="5" cols="30"></textarea><br>
+            <button type="submit">Trimite</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Spiru Narcis</p>
+    </footer>
+</body>
+</html>
+""",
+    "ajutor.html": """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiru Narcis - Ajutor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Spiru Narcis</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="produse.html">Produse</a></li>
+                <li><a href="cos.html">Coșul</a></li>
+                <li><a href="raport.html">Raportează</a></li>
+                <li><a href="ajutor.html">Ajutor</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Ajutor</h2>
+        <p>Contactează echipa noastră pentru mai multe detalii.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Spiru Narcis</p>
+    </footer>
+</body>
+</html>
+""",
+    "styles.css": """
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #333;
+    color: white;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    margin: 0 1em;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+main {
+    padding: 2em;
+}
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+.produse-grid {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+.produs {
+    border: 1px solid #ddd;
+    padding: 1em;
+    text-align: center;
+    width: 300px;
+}
+.produs img {
+    width: 100%;
+    height: auto;
+}
+footer p {
+    margin: 0;
+}
+"""
+}
+
